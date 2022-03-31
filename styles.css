@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: burlywood;
+    font-size: 14px;
+    font-family: monospace;
+    width: 100vw;
+}
+.board {
+    border: 1px solid transparent;
+    font-family: 'Press Start 2P', cursive;
+    background-image: url('./background.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 9px 5px;
+}
+.game-selection {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    display: flex;
+    /* font-size: 30px; */
+    flex-direction: column-reverse;
+}
+
+.card-container {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 10px 0px;
+    font-size: 4em;
+    font-weight: bold;
+    color: orange;
+    perspective: 1000px; /* keep perspective entire container */
+}
+/* flip speed here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.hidden {
+    visibility: hidden;
+}
+/* hide back of pane during swap */
+.front, .back {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    font-family: monospace;
+    font-size: 100%;
+}
+/* flip the pane when hovered */
+/* .card-container:hover .flipper {
+    transform: rotateY(180deg);
+} */
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+    background-color: whitesmoke;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+    background-color: whitesmoke;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, rgba(0,129,254,1) 0%, rgba(192,238,147,1) 100%);
+    border: none;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 3px;
+}
+
+#level {
+    overflow: auto;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    background: none;
+    border: none;
+    height: 100px;
+}
+
+#level option {
+    margin: 5px;
+}
+ header {
+    width: 100%;
+    
+ }
+
+.title {
+    font-size: 35px;
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(90deg, rgba(0,129,254,1) 0%, rgba(192,238,147,1) 100%);
+    border: none;
+    box-shadow: 0px 0px 5px 3px;
+    margin: auto;
+    margin-top: 30px;
+    width: 50%;
+    text-align: center;
+    text-shadow: 0 0 10px white;
+}
+
+.how-to {
+    font-family: 'Press Start 2P', cursive;
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.how-to p:not(.last) {
+    text-align: start;
+}
+
+.how-to p {
+    margin: 5px;
+    font-size: 20px;
+    text-shadow: 0 0 10px white;
+}
+
+.how-to h2 {
+    font-size: 25px;
+    text-shadow: 0 0 10px white;
+}
+
+h3 {
+    font-size: 21px;
+    text-shadow: 0 0 10px white;
+}
