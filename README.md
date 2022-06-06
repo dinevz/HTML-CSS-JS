@@ -1,2 +1,2 @@
 # HTML-CSS-JS
-Projects I've done while learning HTML/CSS/JS
+board games using html/css/js
