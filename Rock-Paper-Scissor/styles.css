@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    width: 100vw;
+    background-color: #41295a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: monospace;
+}
+
+.computer-choice, .players-choice {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.players-choice p {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    font-size: 1.5rem;
+}
+
+.computer-choice p {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    font-size: 1.5rem;
+}
+
+i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.computer-choice {
+    border-bottom: 25px solid white;
+}
+.players-choice {
+    border-top: 25px solid white;
+}
+
+.computer-choice .fa-hand-scissors, .computer .fa-hand-scissors {
+    transform: rotateY(180deg);
+}
+
+.computer-choice .fa-hand-back-fist, .computer .fa-hand-back-fist {
+    transform: rotateZ(80deg);
+}
+
+.computer-choice .fa-hand, .computer .fa-hand {
+    transform: rotateZ(90deg);
+}
+
+.players-choice .fa-hand-back-fist, .player .fa-hand-back-fist {
+    transform: rotate(100deg) scaleY(-1);
+}
+
+.players-choice .fa-hand, .player .fa-hand {
+    transform: rotate(90deg) scaleY(-1);
+}
+
+.players-choice i:hover {
+    color: teal;
+    cursor: pointer;
+    animation: bigger 0.5s forwards;
+}
+
+.result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    color: black;
+    font-weight: bold;
+    z-index: 99;
+}
+
+.player, .computer {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    color: black;
+    font-weight: bold;
+    z-index: 99;
+}
+
+.player {
+    left: 70%;
+    top: 50%;
+    color: teal;
+}
+
+.computer {
+    left: 30%;
+    top: 50%;
+    color: red;
+}
+
+span i {
+    margin: 0;
+    font-size: 3rem;
+}
+@keyframes bigger {
+    100% {font-size: 3rem;}
+}
+
+@media screen and (max-width: 600px) {
+    .computer {
+        left: 20%;
+    }
+    .player {
+        left: 80%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .result {
+        text-align: center;
+    }
+}
